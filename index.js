@@ -8,7 +8,6 @@ const port = 3000;
 const API_URL = "https://api.blockchain.com/v3/exchange";
 const apiKey = process.env.API_KEY;
 const apiSecret = process.env.API_SECRET;
-// why blue "config"
 const configs = {
     headers: {
         "X-API-Token": apiKey,
