@@ -9,7 +9,10 @@ body {
     background: #222;
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
       helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
-    color: hotpink;
+}
+
+.tektur{
+    font-family: "Tektur", sans-serif;
 }
   
 main {
@@ -19,10 +22,6 @@ main {
 .footer {
     flex-shrink: 0; 
     background-color: #222;
-}
-
-.hotpink{
-    color: pink;
 }
 
 .lime{
@@ -38,18 +37,31 @@ main {
     max-width: 90%;
 }
 
-@media(min-width: 768px) and (max-width: 1299.98px){
+@media(max-width: 480px){
     .custom-list-group{
-        max-width: 50%;
+        max-width: 100%;
+    }
+    body{
+        padding: 0;
+    }
+}
+@media(min-width: 768px) and (max-width: 1023.98px){
+    .custom-list-group{
+        max-width: 70%;
+    }
+}
+@media(min-width: 1024px) and (max-width: 1299.98px){
+    .custom-list-group{
+        max-width: 60%;
     }
 }
 @media(min-width: 1300px) and (max-width: 1799.98px){
     .custom-list-group{
-        max-width: 35%;
+        max-width: 50%;
     }
 }
 @media(min-width: 1800px){
     .custom-list-group{
-        max-width: 25%;
+        max-width: 30%;
     }
 }

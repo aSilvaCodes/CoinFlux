@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container my-5 mw-md-custom-forty">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <img src="/images/coinflux-logo.jpg" class="mb-5" height="200px">
+      <h1 class="text-body-emphasis mb-4 tektur lime" style="color: lime !important;">About CoinFlux</h1>
+      <p class="col-lg-8 mx-auto fs-5 tektur">
+        CoinFlux is a dynamic web application designed to provide real-time insights into the cryptocurrency market. Leveraging the Blockchain.com API, CoinFlux fetches and displays a comprehensive list of dozens of cryptocurrencies, including their 24-hour price changes and unique icons sourced from CryptoLogos. 
+        <br><br>
+        This project offers users an accessible and visually appealing way to monitor crypto market trends.
+  
+        The backend is built with Node.js and Express.js, ensuring a robust and efficient server-side architecture. Data is seamlessly rendered using EJS templating, allowing for dynamic updates and a clean integration of cryptocurrency details. For the frontend, Bootstrap powers a responsive and user-friendly interface, optimizing the experience across desktops, tablets, and mobile devices.
+        <br>
+      </p>
+      <p class="fs-5 tektur lime">
+        <br>Key features include:
+        <ul class="mx-auto text-start tektur" style="max-width: fit-content; padding-left: 20px; ">
+          <li>Real-time ticker data for numerous cryptocurrencies via the Blockchain.com API.</li>
+          <li>24-hour price change tracking for market insights.</li>
+          <li>Custom cryptocurrency icons for enhanced visual recognition.</li>
+          <li>A sleek, responsive design crafted with Bootstrap.</li>
+        </ul>
+      </p>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

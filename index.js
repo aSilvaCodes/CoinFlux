@@ -1,7 +1,6 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
-import { config } from "dotenv";
 
 const app = express();
 const port = 3000;
@@ -104,6 +103,10 @@ app.get("/", async (req,res) => {
     } catch (error) {
         res.status(404).send(error.message);
     }
+});
+
+app.get("/about", (req, res) => {
+    res.render("about.ejs");
 });
 
 app.listen(port, () => {

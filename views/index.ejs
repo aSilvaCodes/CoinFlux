@@ -5,13 +5,15 @@
     <% if(locals.cryptos){ %> 
       <% cryptos.forEach(crypto => { %>
         <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-          <img src="<%= crypto.logo %>" alt="<%= crypto.symbol %> icon" width = "50" height="50" onerror="this.src='<%= crypto.defaultLogo %>'">
+          <img src="<%= crypto.logo %>" alt="<%= crypto.symbol %> icon" width = "100" height="100" onerror="this.src='<%= crypto.defaultLogo %>'">
           <div class="d-flex gap-2 w-100 justify-content-between">
             <div>
-              <h6 class="mb-0 mt-1"><%= crypto.symbol %></h6>
+              <h6 class="mb-0 mt-1 tektur"><%= crypto.symbol %></h6>
               <p class="mb-0 opacity-75">24H Change: $<%= crypto.price24h %></p>
+              <p class="mb-0 opacity-75">24H Volume: $<%= crypto.volume24h %></p>
+              <p class="mb-0 opacity-75">Last Trade Price: $<%= crypto.lastTradePrice %></p>
             </div>
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 tektur">
               <button type="button" class="btn btn-success">Buy</button>
               <button type="button" class="btn btn-primary">Trade</button>
             </div>
