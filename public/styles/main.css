@@ -1,7 +1,55 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #222;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+      helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    color: hotpink;
+}
+  
+main {
+    flex: 1 0 auto; 
+}
+  
+.footer {
+    flex-shrink: 0; 
+    background-color: #222;
+}
+
 .hotpink{
     color: pink;
 }
 
+.lime{
+    color: lime;
+}
+
 .max-width-100{
     max-width: 100%;
+}
+
+.custom-list-group{
+    width: 100%;
+    max-width: 90%;
+}
+
+@media(min-width: 768px) and (max-width: 1299.98px){
+    .custom-list-group{
+        max-width: 50%;
+    }
+}
+@media(min-width: 1300px) and (max-width: 1799.98px){
+    .custom-list-group{
+        max-width: 35%;
+    }
+}
+@media(min-width: 1800px){
+    .custom-list-group{
+        max-width: 25%;
+    }
 }
