@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container my-5">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+    <img src="<%= logo %>" alt="<%= token.symbol %> icon" width = "100" height="100" onerror="this.src='https://cryptologos.cc/logos/dogebonk-dobo-logo.svg?v=040'">
+      <h1 class="text-body-emphasis"><%= token.symbol %></h1>
+      <p class="mb-0 opacity-75">24H Change: $<%= token.price_24h %></p>
+      <p class="mb-0 opacity-75">24H Volume: $<%= token.volume_24h %></p>
+      <p class="mb-0 opacity-75">Last Trade Price: $<%= token.last_trade_price %></p>
+      <div class="d-inline-flex gap-2 mb-3 mt-4">
+        <button class="d-inline-flex align-items-center btn btn-success btn-lg px-4 rounded-pill" type="button">
+          Buy
+        </button>
+        <button class="btn btn-primary btn-lg px-4 rounded-pill" type="button">
+          Trade
+        </button>
+      </div>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

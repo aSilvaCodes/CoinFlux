@@ -13,6 +13,7 @@ const configs = {
         "X-API-Secret": apiSecret
     }
 };
+const tokenList = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -20,6 +21,7 @@ app.use(express.static("public"));
 async function getTickers() {
     try{
         const response = await axios.get(API_URL + "/tickers", configs);
+        //tokenList = response.data;
         return response.data;
     } catch(error){
         console.error("Error fetching tickers:", error);
@@ -107,6 +109,20 @@ app.get("/", async (req,res) => {
 
 app.get("/about", (req, res) => {
     res.render("about.ejs");
+});
+
+app.get("/summary/:symbol", async (req, res) => {
+    const tokenSymbol = req.params.symbol;
+    const tokenList = await getTickers();
+    const token = tokenList.find(t => t.symbol.split('-')[0] === tokenSymbol);
+    if (token === -1) {
+        return res.status(404).send('Token not found');  
+    }
+    console.log(token);
+    res.render("summary.ejs", {
+        token: token,
+        logo: getIconUrl(token.symbol)
+    });
 });
 
 app.listen(port, () => {
