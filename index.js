@@ -111,6 +111,10 @@ app.get("/about", (req, res) => {
     res.render("about.ejs");
 });
 
+app.get("/contact", (req, res) => {
+    res.render("contact.ejs");
+});
+
 app.get("/summary/:symbol", async (req, res) => {
     const tokenSymbol = req.params.symbol;
     const tokenList = await getTickers();
@@ -118,7 +122,6 @@ app.get("/summary/:symbol", async (req, res) => {
     if (token === -1) {
         return res.status(404).send('Token not found');  
     }
-    console.log(token);
     res.render("summary.ejs", {
         token: token,
         logo: getIconUrl(token.symbol)
